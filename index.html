@@ -16,6 +16,7 @@
             height: 100vh;
             margin: 0;
             text-align: center;
+            transition: background 0.5s ease; /* این خط باعث میشه تغییر رنگ نرم باشه */
         }
         button {
             padding: 15px 30px;
@@ -28,16 +29,35 @@
             font-weight: bold;
             transition: 0.3s;
             margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        button:hover {
-            transform: scale(1.1);
-            background-color: #f0f0f0;
+        button:active {
+            transform: scale(0.95);
         }
     </style>
 </head>
-<body>
+<body id="myBody">
     <h1>سلام سابر! 👋</h1>
     <p>این اولین وب‌سایت منه که با همکاری DeepSeek ساختم.</p>
-    <button onclick="alert('تو یک برنامه‌نویس واقعی هستی! 🚀')">روی من کلیک کن!</button>
+    <button onclick="changeColor()">روی من کلیک کن!</button>
+
+    <script>
+        function changeColor() {
+            // لیستی از رنگ‌های پس‌زمینه برای تغییر
+            const colors = [
+                'linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%)', // نارنجی
+                'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)', // سبز
+                'linear-gradient(135deg, #fc4a1a 0%, #f7b733 100%)', // آتشین
+                'linear-gradient(135deg, #8E2DE2 0%, #4A00E0 100%)', // بنفش
+                'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'  // رنگ اصلی
+            ];
+            
+            // انتخاب یک رنگ تصادفی
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            
+            // تغییر رنگ پس‌زمینه
+            document.getElementById('myBody').style.background = randomColor;
+        }
+    </script>
 </body>
 </html>
