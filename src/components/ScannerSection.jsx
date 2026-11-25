@@ -94,8 +94,8 @@ export function ScannerSection({
       <Card className="slide-up overflow-hidden !p-0">
         <div className="flex items-center gap-2 border-b border-ink-700/50 px-4 py-3">
           <Trophy size={16} className="text-warn" />
-          <h3 className="font-semibold text-ink-200">Top 10 Buy Candidates</h3>
-          <Badge tone="warn">لیست برتر خرید</Badge>
+          <h3 className="font-semibold text-ink-200">ده نماد برتر برای خرید</h3>
+          <Badge tone="warn">Top 10</Badge>
         </div>
         {top10.length === 0 ? (
           <div className="p-4">

@@ -67,7 +67,7 @@ function suggestStrategy({ type, iv, intrinsic, timeValue, moneyness, daysToExpi
     return {
       name: 'اهرم تهاجمی',
       kind: 'leveraged',
-      note: `اهرم حدود ${leverage}× — مناسب سفته‌بازی کوتاه‌مدت`,
+      note: `اهرم حدود ${Number(leverage).toFixed(1)}× — مناسب سفته‌بازی کوتاه‌مدت`,
     }
   }
   return {

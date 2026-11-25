@@ -14,8 +14,10 @@ export function formatNumber(n, digits = 0) {
 
 export function formatPct(n, digits = 1) {
   if (n == null || Number.isNaN(n)) return '—'
-  const sign = n > 0 ? '+' : ''
-  return toFaDigits(`${sign}${n.toFixed(digits)}٪`)
+  const sign = n > 0 ? '+' : n < 0 ? '−' : ''
+  const abs = Math.abs(n).toFixed(digits)
+  // LTR isolate so sign stays before digits in RTL layouts
+  return `\u2066${sign}${toFaDigits(abs)}٪\u2069`
 }
 
 export function formatCompact(n) {

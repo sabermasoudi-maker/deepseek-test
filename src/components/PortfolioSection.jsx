@@ -134,7 +134,7 @@ export function PortfolioSection({ portfolio, onImport }) {
       </Card>
 
       <Card>
-        <h3 className="mb-3 font-semibold text-ink-200">Risk Alerts — هشدارهای خودکار</h3>
+        <h3 className="mb-3 font-semibold text-ink-200">هشدارهای خودکار ریسک</h3>
         {alerts.length === 0 ? (
           <EmptyHint>در حال حاضر هشدار فعالی وجود ندارد.</EmptyHint>
         ) : (

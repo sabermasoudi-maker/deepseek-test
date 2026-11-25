@@ -41,7 +41,7 @@ export function CommoditySection({ certificates, derivatives, arbitrage }) {
                 <th className="px-3 py-3 font-medium">حجم</th>
                 <th className="px-3 py-3 font-medium">قیمت پایانی</th>
                 <th className="px-3 py-3 font-medium">بازار فیزیکی</th>
-                <th className="px-3 py-3 font-medium">حباب</th>
+                <th className="px-3 py-3 font-medium">حباب (مثبت=گران‌تر از فیزیکی)</th>
                 <th className="px-3 py-3 font-medium">سیگنال</th>
               </tr>
             </thead>
